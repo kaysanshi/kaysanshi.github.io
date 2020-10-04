@@ -249,40 +249,32 @@
     <div class="container desc">
       <div class="row">
         <div class="col-lg-2 col-lg-offset-1">
-          <h5>PORTFOLIO</h5>
+          <h5>PROJECT</h5>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-3">
           <p><img class="img-responsive" src="img/port01.jpg" alt=""></p>
         </div>
-        <div class="col-lg-3">
-          <p>CANALS OF ENGLAND</p>
+        <div class="col-lg-6">
+          <p>爱朗慧才苑PLG个性化评估系统 - 家园互动模块。</p>
           <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> design</sm>
+			<more>爱朗慧才苑微信小程序是PLG个性化评估系统的一个小的分支，主要实现家长查看老师对小孩的测评情况，主要是PLG个性化评估系统中教师对小孩的各个指标的观察家长可以查看到其中的内容，和一些图文展示，视频播放，语音播放，手机号验证码登录，家长在web端可以查看家园互动日报每日可接收小孩的日报。</more>
+            <more>本项目是在乐精灵教育科技有限公司时所做的项目，项目后台主要采用Spring框架,其中数据库使用sqlserver,Jdbctemplate操作，后台中通过解析出微信小程序传入的iv,code,encryptedData，nick后台通过接受这些参数通过加密解密算法解密出用户的unionid,和openid,通过唯一的unionId获取到userId的信息，最终再通过后台中的其他获取观察记录列表，关联家长和更改关系，查看小孩报告，通过调用阿里云短信服务进行获取发送短信验证码，将验证码存入redis中供核对，包含前端开发和后台开发。在web端教师通过添加观察和note记录最终通过mandrill为其生成邮件每日通过定时任务发送给家长。家园互动可以将note生成pdf通过wkhtmltopdf插件进行包含图片和文本的html页面生成pdf进行下载。生成pdf上传到S3服务器中，前台通过轮训请求下载pdf接口进行下载<br/><br/>
+              <sm><i class="icon-tag"></i> java developer</sm>
             </more>
           </p>
         </div>
-
-        <div class="col-lg-6 col-lg-offset-3">
-          <p><img class="img-responsive" src="img/port02.jpg" alt=""></p>
-        </div>
-        <div class="col-lg-3">
-          <p>SANKEY</p>
-          <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> front-end</sm>
-            </more>
-          </p>
-        </div>
-
-        <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-3 col-lg-offset-3">
           <p><img class="img-responsive" src="img/port03.jpg" alt=""></p>
         </div>
-        <div class="col-lg-3">
-          <p>WE GROW</p>
+        <div class="col-lg-6">
+          <p>乐享居家养老服务平台（服务端）2018.12-2019-09</p>
+		  <p>SpringCloud,springboot,redis,Mui,LayUI</p>
           <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> web design</sm>
+            <more>乐享居家养老平台的开发，本着居家养老的实际需求，在减轻家属陪护压力的同时使老人享受到便捷优质的养老服务项目，就近加入最适宜的老年团体，获取更多的健康资讯，丰富老人的文化娱乐生活，减少老人精神上、生活上的孤独感，助推子女对老人更多的关爱。<br/><br/>
+              <sm><i class="icon-tag"></i> java developer</sm>
+            </more>
+			<more>采用微服务框架SpringCloud（包含其组件）+SpringBoot完成，其中包涵消息推送，使用个推软件进行消息推送，项目主要是针对养老的，在服务者app采用h5＋mui进行，后台采用微服务架构和layui完成 ，完成从乐享app到服务者app的一个信息传递，可以进行接单，订单反馈，和申请成为服务者，同时进行对个人的管理。此项目获得计算机设计大赛国赛二等奖。<br/><br/>
+              <sm><i class="icon-tag"></i> java developer</sm>
             </more>
           </p>
         </div>
