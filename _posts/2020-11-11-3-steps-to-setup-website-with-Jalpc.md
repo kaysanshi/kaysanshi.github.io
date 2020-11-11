@@ -3,7 +3,7 @@ layout: post
 title:  "3 Steps (2 minutes) to Setup Your Personal Website with Jalpc"
 date:   2020-11-11
 desc: "3 Steps (2 minutes) to Setup Your Personal Website with Jalpc"
-keywords: "Jalpc,Jekyll,gh-pages,website,blog,easy"
+keywords: "Jalpc,Jekyll,gh-pages,website,blog,easy "
 categories: [blog]
 tags: [Jalpc,Jekyll]
 icon: icon-html
@@ -14,12 +14,13 @@ icon: icon-html
 
 1. **去git上把模板进行给拉取下来 clone forked repository.**
 	
+
  `git clone git@github.com:github_username/Jalpc.git`.
 	
 	或者直接git我的模板地址. 
-
-	`git clone git@github.com:kaysanshi/kaysanshi.github.io.git`.
 	
+	`git clone git@github.com:kaysanshi/kaysanshi.github.io.git`.
+
 <!-- ![edit]({{ site.img_path }}/3steps/edit.gif) -->
 <img src="{{ site.img_path }}/3steps/edit.gif" width="75%">
 
@@ -38,6 +39,8 @@ icon: icon-html
   * **CNAME**: 如果你想用自己的域名发布网站：编辑它并创建“gh pages”分支；如果你想使用*github_用户名.github.io*：留空.
 
   * 转到repo的设置面板，config**GitHub Pages**部分，确保网站已发布.
+
+    
 
 **3.将更改推送到GitHub存储库并查看您的网站，完成！**
 
