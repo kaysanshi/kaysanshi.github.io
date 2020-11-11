@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: javaSE, javaEE, Spring/SpringBoot/SpringCloud, middleware,  Python, Containerization,linux
-percentage: 85, 86, 88, 75, 65, 60,55,
+aspects: javaSE, javaEE, Spring, SpringBoot/SpringCloud,middleware,  Python, Containerization,linux
+percentage: 85, 86, 88,78, 75, 65, 60,55,
