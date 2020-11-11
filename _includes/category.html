@@ -21,7 +21,6 @@ $(function(){
         {% assign category = category | upcase %}
         {% endif %}
         <h1>{{ category }}</h1>
-        <>
     </div>
 </div>
 <div class="wrapper wrapper-content  animated fadeInRight blog">
@@ -30,7 +29,9 @@ $(function(){
             {% assign counter = 0 %}
             {% for post in site.categories[category] %}
             {% assign counter = counter | plus: 1 %}
-            <h2> {{site.categories[category]}} </h2>
+            {% if counter == 0 %}
+                <h2> {{site.categories[category]}} </h2>
+            {% endif %}
             <li>
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="ibox">
