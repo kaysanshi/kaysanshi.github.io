@@ -1,0 +1,9 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -85,6 +85,7 @@
+             <h5>ABOUT</h5>
+           </div>
+           <div class="col-lg-6">
++            <p>I'm Java engineer & java developer with 1 years of professional experience. I'm interested in all kinds of skil, but my major focus is on java web, javaEE.  I also have skills in other fields like Operation and maintenance or web development.</p>
+           </div>
+           <div class="col-lg-3">
+             <p><a href="#"><i class="icon-file"></i></a>

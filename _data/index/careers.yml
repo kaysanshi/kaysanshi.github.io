@@ -1,30 +1,31 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+# 有近及远
 - name:
-    detail: Company A
+    detail: 上海蓝色星球科技股份有限公司
     i18n: company_a
   desc:
-    detail: I worked at Company A ...
+    detail: I worked at Company blueearth
     i18n: company_a_desc
   date:
-    detail: Apr. 2016
+    detail: Oct. 2020
     i18n: company_a_date
   job:
-    detail: CTO
+    detail: java 开发工程师
     i18n: company_a_job
   icon: fa-plus-square
   present: true
 
 - name:
-    detail: Company B
+    detail: 乐精灵教育科技(北京)有限公司
     i18n: company_b
   desc:
-    detail: I worked at Company B ...
+    detail: I worked at Company learninggenie
     i18n: company_b_desc
   date:
-    detail: Jun. 2015
+    detail: Jul. 2019
     i18n: company_b_date
   job:
-    detail: Full Stack Developer
+    detail: java 开发工程师
     i18n: company_b_job
   icon: fa-plus-square
