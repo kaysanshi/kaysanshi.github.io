@@ -3,7 +3,7 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: itoken
   i18n: itoken
-  gh_user: kay三石
+  gh_user: kaysanshi
   repo: spring-cloud-itoken
   img: /static/assets/img/landing/google.png
   desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
@@ -17,6 +17,7 @@
 
 - name: 论坛
   i18n:
+  gh_user: kaysanshi
   repo: spring-boot-community 
   img: /static/assets/img/landing/google.png
   desc: This is another project.
