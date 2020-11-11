@@ -20,11 +20,11 @@ icon: icon-html
 
 	`git clone git@github.com:kaysanshi/kaysanshi.github.io.git`.
 	
-	<!-- ![edit]({{ site.img_path }}/3steps/edit.gif) -->
-	<img src="{{ site.img_path }}/3steps/edit.gif" width="75%">
-	
-	
-	
+<!-- ![edit]({{ site.img_path }}/3steps/edit.gif) -->
+<img src="{{ site.img_path }}/3steps/edit.gif" width="75%">
+
+
+
 2. **去配置列表:**
 
   * **_config.yml**: 编辑 'Website settings', 'author', 'comment' and 'analytics' items.
