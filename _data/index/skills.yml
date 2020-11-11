@@ -2,7 +2,7 @@
 
 label: Ability
 id : cs
-aspects: javaSE, javaEE, Spring, SpringBoot/SpringCloud,Redis,MQ,SQL,Python,Docker,Linux,TCP/UDP(http), Vue,AngularJS
+aspects: javaSE, javaEE, Spring, SpringBoot/SpringCloud,Redis,MQ,SQL,Python,Docker,Linux,Socket, Vue,AngularJS
 percentage: 85, 86, 88,78, 70, 65, 80,65,75,65,40,60,40
 
 # 等级划分
