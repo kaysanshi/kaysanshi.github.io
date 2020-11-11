@@ -29,9 +29,6 @@ $(function(){
             {% assign counter = 0 %}
             {% for post in site.categories[category] %}
             {% assign counter = counter | plus: 1 %}
-            {% if counter == 0 %}
-                <h2> {{site.categories}} </h2>
-            {% endif %}
             <li>
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="ibox">
