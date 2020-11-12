@@ -2085,26 +2085,29 @@ ul.clear-list:first-child {
 
 .spinner__2 {
   background-color: #F43059;
+  width:30px;
+  height:30px;
+  border-radius: 50%;
 }
+
 .spinner__2:after {
   background-color: #fff;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 26px;
-  left: 18px;
+  left: 8px;
   transform-origin: top 50%;
-  animation: shrinkFull 3s linear infinite;
+  animation: shrinkFull 3s linear infinite
 }
+
 .spinner__2:before {
   background-color: #fff;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 26px;
-  left: 36px;
+  left: 20px;
   transform-origin: top 50%;
-  animation: shrinkFull 3s linear infinite;
+  animation: shrinkFull 3s linear infinite
 }
 @keyframes shrinkFull {
   0% {
@@ -2184,48 +2187,54 @@ ul.clear-list:first-child {
 .spinner__4 {
   background: transparent;
 }
+
 .spinner__4 span {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background: #000;
   position: absolute;
   border-radius: 50%;
-  top: 15px;
-  left: 35px;
+  top: 16px;
+  left: 21px;
 }
-.spinner__4:before,
-.spinner__4:after {
+
+.spinner__4:before,.spinner__4:after {
   display: block;
-  height: 0px;
-  width: 0px;
   position: absolute;
-  border: 35px solid #FFCC00;
+  left:-3px;
+  border: 15px solid #FFCC00;
   border-left-color: transparent;
   border-bottom-color: transparent;
-  animation: chunk-top 1s ease infinite;
+  animation: chunk-top 1s ease infinite
 }
+
 .spinner__4:after {
-  border: 35px solid #FFCC00;
+  border: 15px solid #FFCC00;
   border-right-color: transparent;
   border-top-color: transparent;
-  animation: chunk-bottom 1s ease infinite;
+  animation: chunk-bottom 1s ease infinite
 }
+
 @keyframes chunk-top {
   0%, 100% {
-      transform: rotate(-45deg);
+      transform: rotate(-45deg)
   }
+
   50% {
-      transform: rotate(-80deg);
+      transform: rotate(-80deg)
   }
 }
+
 @keyframes chunk-bottom {
   0%, 100% {
-      transform: rotate(-40deg);
+      transform: rotate(-40deg)
   }
+
   50% {
-      transform: rotate(0deg);
+      transform: rotate(0deg)
   }
 }
+
 
 
 
