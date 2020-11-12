@@ -2085,9 +2085,12 @@ ul.clear-list:first-child {
 
 .spinner__2 {
   background-color: #F43059;
-  width:30px;
-  height:30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+  display:inline-block;
+  float:left;
+  margin-top:5px;
 }
 
 .spinner__2:after {
@@ -2095,8 +2098,9 @@ ul.clear-list:first-child {
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 8px;
-  transform-origin: top 50%;
+  left: 6px;    
+  margin-top:10px;
+  transform-origin: top 30%;
   animation: shrinkFull 3s linear infinite
 }
 
@@ -2105,8 +2109,9 @@ ul.clear-list:first-child {
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 20px;
-  transform-origin: top 50%;
+  left: 18px;    
+  margin-top:10px;
+  transform-origin: top 30%;
   animation: shrinkFull 3s linear infinite
 }
 @keyframes shrinkFull {
