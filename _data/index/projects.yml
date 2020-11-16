@@ -19,5 +19,6 @@
   i18n:
   gh_user: kaysanshi
   repo: spring-boot-community 
+  url: http://forum.kaysanshi.top:8081/
   img: /static/assets/img/landing/google.png
-  desc: This is another project.
+  desc: This is my project.
