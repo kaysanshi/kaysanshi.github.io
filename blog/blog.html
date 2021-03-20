@@ -16,13 +16,13 @@ permalink: /blog/
         <div class="wrapper wrapper-content animated fadeInRight">
 
             <!-- latest 10 blog -->
-			{% for post in site.posts limit:20 %}
+			{% for post in site.posts limit:10 %}
             <div class="vote-item">
                 <div class="row">
                     <div class="col-md-10">
                         <div class="vote-actions">
                         </div>
-                        {% if post.icon == 'icon-java' %}
+                        <!-- {% if post.icon == 'icon-java' %}
                         <div class="spinner spinner__1"></div>
                         {% endif %}
                         {% if post.icon == 'icon-python' %}
@@ -33,7 +33,7 @@ permalink: /blog/
                         {% endif %}
                         {% if post.icon == 'icon-html' %}
                         <div class="spinner spinner__4"><span></span></div>
-                        {% endif %}
+                        {% endif %} -->
                         <a href="{{ post.url | prepend: site.baseurl }}" class="vote-title">
                             {{ post.title }}
                         </a>
