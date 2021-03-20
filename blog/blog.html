@@ -14,7 +14,18 @@ permalink: /blog/
 <div class="row">
     <div class="col-xs-12 col-sm-9 col-md-6 col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
-
+            <!-- {% if post.icon == 'icon-java' %}
+            <div class="spinner spinner__1"></div>
+            {% endif %}
+            {% if post.icon == 'icon-python' %}
+            <div class="spinner spinner__2"></div>
+            {% endif %}
+            {% if post.icon == 'icon-database' %}
+            <div class="spinner spinner__3"></div>
+            {% endif %}
+            {% if post.icon == 'icon-html' %}
+            <div class="spinner spinner__4"><span></span></div>
+            {% endif %} -->
             <!-- latest 10 blog -->
 			{% for post in site.posts limit:10 %}
             <div class="vote-item">
@@ -22,18 +33,7 @@ permalink: /blog/
                     <div class="col-md-10">
                         <div class="vote-actions">
                         </div>
-                        <!-- {% if post.icon == 'icon-java' %}
-                        <div class="spinner spinner__1"></div>
-                        {% endif %}
-                        {% if post.icon == 'icon-python' %}
-                        <div class="spinner spinner__2"></div>
-                        {% endif %}
-                        {% if post.icon == 'icon-database' %}
-                        <div class="spinner spinner__3"></div>
-                        {% endif %}
-                        {% if post.icon == 'icon-html' %}
-                        <div class="spinner spinner__4"><span></span></div>
-                        {% endif %} -->
+                       
                         <a href="{{ post.url | prepend: site.baseurl }}" class="vote-title">
                             {{ post.title }}
                         </a>
