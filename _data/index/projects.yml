@@ -6,7 +6,7 @@
   gh_user: kaysanshi
   repo: spring-cloud-itoken
   img: /static/assets/img/landing/google.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+  desc: This project is my project. I use springcloud buid it.
 
 - name: Python自动化测试
   i18n: cpython
