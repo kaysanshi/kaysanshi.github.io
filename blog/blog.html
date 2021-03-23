@@ -49,7 +49,6 @@ permalink: /blog/
                     <div class="col-md-10">
                         <div class="vote-actions">
                         </div>
-                       
                         <a href="{{ post.url | prepend: site.baseurl }}" class="vote-title">
                             {{ post.title }}
                         </a>
@@ -70,7 +69,7 @@ permalink: /blog/
             </div>
             {% endfor %}
         </div>
+        {% include pagination.html %}
     </div>
-    {% include pagination.html %}
 </div>
 
