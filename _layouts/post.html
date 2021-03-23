@@ -8,13 +8,13 @@ layout: default
         <div id="toc-wrapper" class="">
             <span class="">
             </span>
-            <nav id="toc" data-toggle="toc"></nav>
+            <nav  id="toc" data-toggle="toc"></nav>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-8 col-lg-offset-2" >
             <div class="ibox">
-                <div class="ibox-content" data-target="#toc" id="scorll">
+                <div class="ibox-content" >
                     <div class="pull-right">
                     	{% for category in page.categories %}
                         	<a class="btn btn-white btn-xs" href="{{ category | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category }}</a>
@@ -26,7 +26,9 @@ layout: default
                             {{ page.title }}
                         </h1>
                     </div>
-                    	{{ content }}
+                    <div data-target="#toc" id="scorll">
+                        {{ content }}
+                    </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
