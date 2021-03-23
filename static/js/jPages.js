@@ -16,9 +16,9 @@
         containerID: "",
         first: false,
         // previous: "← Previous",
-        previous: false,
+        previous: "Previous",
         // next: "Next →",
-        next: false,
+        next: "Next",
         last: false,
         links: "numeric", // blank || title
         startPage: 1,
