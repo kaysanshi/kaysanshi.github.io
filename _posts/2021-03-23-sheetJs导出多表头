@@ -1,0 +1,205 @@
+---
+layout: post
+title:  "sheetjs导出多表头"
+date:   2021-03-23
+desc: "sheetjs导出多表头"
+keywords: "sheetjs"
+categories: [Web]
+tags: [sheetJs]
+icon: icon-html
+---
+### 参考
+[https://github.com/SheetJS/sheetjs/tree/master/demos/angular](https://github.com/SheetJS/sheetjs/tree/master/demos/angular)
+
+### 代码实现
+
+```javascript
+define(["app"], function (app) {
+    app.factory("ExportService", function (env) {
+        var service = {
+            /**
+             * 导出excel没有合并列的
+             * @param {*} header  ['A','B','C','D']
+             * @param {*} data  [{obj:[{'code' : '','name': 'A','value':'1'},{'code':'','name':'B','value':'2'}]},{obj:[{},{}]}]
+             * @param {*} wsName sheet的名称
+             * @param {*} wbName excel的名称
+             * @returns
+             */
+            exports: function (header, data, wsName, wbName) {
+                var jsonArgs = {};
+                jsonArgs.header = [];
+                _.each(header, function (obj) {
+                    jsonArgs.header.push(obj);
+                });
+                let objArray = [];
+                _.each(data, function (obj) {
+                    var _obj = {};
+                    _.each(obj.obj, function (el) {
+                        _obj[el.name] = el.value;
+                    });
+                    objArray.push(_obj);
+                });
+                // 将json数据转为sheet
+                var ws = XLSX.utils.json_to_sheet(objArray, jsonArgs);
+                // 创建一个book对象
+                var wb = XLSX.utils.book_new();
+                // 将sheet对象加入到workbook中
+                let wsNames = wsName ? wsName : "sheet1";
+                let wbNames = wbName ? wbName : env.data.moduleInfo.name;
+                XLSX.utils.book_append_sheet(wb, ws, wsNames);
+                return XLSX.writeFile(wb, wbNames + ".xlsx");
+            },
+            /**
+             * 导出excel需要合并列的
+             * @param {*} header
+             * @param {*} data
+             * @param {*} wsName
+             * @param {*} wbName
+             */
+            exportMergesCol: function (header, data, wsName, wbName) {
+                var header = {
+                    col: [
+                        { name: "A", colspan: "1", rowspan: "2" },
+                        {
+                            name: "BC",
+                            colspan: "2",
+                            rowspan: "2",
+                            child: [
+                                { name: "BC1", colspan: "1", rowspan: "1" },
+                                { name: "BC2", colspan: "1", rowspan: "1" },
+                            ],
+                        },
+                        { name: "D", colspan: "1", rowspan: "2" },
+                        {
+                            name: "E",
+                            colspan: "3",
+                            rowspan: "2",
+                            child: [
+                                { name: "E1", colsapn: "1", rowspan: "1" },
+                                { name: "E2", colsapn: "1", rowspan: "1" },
+                                { name: "E3", colsapn: "1", rowspan: "1" },
+                            ],
+                        },
+                        {
+                            name: "FG",
+                            colspan: "2",
+                            rowspan: "2",
+                            child: [
+                                { name: "FG1", colspan: "1", rowspan: "1" },
+                                { name: "FG2", colspan: "1", rowspan: "1" },
+                            ],
+                        },
+                        { name: "H", colspan: "1", rowspan: "2" },
+                        {
+                            name: "IJ",
+                            colspan: "2",
+                            rowspan: "2",
+                            child: [
+                                { name: "IJ1", colspan: "1", rowspan: "1" },
+                                { name: "IJ2", colspan: "1", rowspan: "1" },
+                            ],
+                        },
+                    ],
+                };
+                var data = [
+                    {
+                        obj: [
+                            { name: "AAAAA", value: "AAAAA" },
+                            { name: "BBBB", value: "BBBB" },
+                            { name: "BBBB", value: "xxxx" },
+                        ],
+                    },
+                    {
+                        obj: [
+                            { name: "AAAAA", value: "AAAAA" },
+                            { name: "BBBB", value: "BBBB" },
+                            { name: "BBBB", value: "xxx2" },
+                        ],
+                    },
+                ];
+                // 构造出js二维的头
+                // [[],[]]
+                var objCol = [];
+                var obj2COl = [];
+                _.each(header.col, function (obj) {
+                  objCol.push(obj.name);
+                  if (obj.colspan != 1) {
+                    _.each(obj.child, function (el, index) {
+                      if (index != 0) {
+                        objCol.push(null);
+                      }
+                      console.log(el);
+                    });
+                  } else {
+                    if (obj.rowspan != 1) {
+                      obj2COl.push(null);
+                    }
+                  }
+                  if (obj.child && obj.child.length > 0) {
+                    _.each(obj.child, function (el) {
+                      obj2COl.push(el.name);
+                    });
+                  }
+                });
+                // 构造js数据array，
+                var headerObj = [];
+                headerObj.push(objCol);
+                headerObj.push(obj2COl);
+                var merge = [];
+                var orindex = 0;
+                var indexArray = [];
+                // 进行合并单元格
+                _.each(header.col, function (obj, indexs) {
+                  if (obj.child) {
+                    if (obj.child.length > 1) {
+                      indexArray.push(orindex);
+                    }
+                    _.each(obj.child, function (obj, index) {
+                      orindex++;
+                    });
+                    _.each(indexArray, function (objs) {
+                      merge.push({
+                        s: { r: 0, c: objs },
+                        e: { r: 0, c: objs + parseInt(obj.colspan) - 1 },
+                      });
+                    });
+                    // 重新置为空数组
+                    indexArray = [];
+                  } else {
+                    merge.push({
+                      s: { r: 0, c: orindex },
+                      e: { r: 1, c: orindex },
+                    });
+                    orindex++;
+                  }
+                });
+                // 进行转换内容数据
+                let objArray = [];
+                _.each(data, function (obj) {
+                    console.log(obj);
+                    var array = [];
+                    _.each(obj.obj, function (el) {
+                        console.log(el);
+                        array.push(el.value);
+                    });
+                    objArray.push(array);
+                });
+                // 将js数组转为sheet
+                var ws = XLSX.utils.aoa_to_sheet(headerObj.concat(objArray));
+                ws["!merges"] = merge;
+                // 创建一个book对象
+                var wb = XLSX.utils.book_new();
+                // 将sheet对象加入到workbook中
+                let wsNames = wsName ? wsName : "sheet1";
+                let wbNames = wbName ? wbName : env.data.moduleInfo.name;
+                XLSX.utils.book_append_sheet(wb, ws, wsNames);
+                return XLSX.writeFile(wb, wbNames + ".xlsx");
+            },
+        };
+
+        return service;
+    });
+});
+
+```
+
