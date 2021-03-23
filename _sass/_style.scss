@@ -2621,10 +2621,19 @@ body {
     opacity: 1;
   }
 }
+#toc .navbar-nav{
+  float:none
+}
 #toc .navbar-nav>li{
   float: none;
 }
-
+#toc .nav>li>a{
+  display: inherit;
+  padding: 5px 5px;
+}
+#toc .navbar-nav>li>a {
+line-height: 2px;
+}
 .landing-page {
   span.navy {
     color: #3385FF;
