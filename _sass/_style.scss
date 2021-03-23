@@ -1285,7 +1285,10 @@ a {
     text-decoration: none;
   }
 }
-
+a img{
+  width: 80%;
+  margin:0px 20px;
+}
 .border-bottom {
   border-bottom: 1px solid #e7eaec !important;
 }
