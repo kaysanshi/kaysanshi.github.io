@@ -2621,7 +2621,9 @@ body {
     opacity: 1;
   }
 }
-
+#toc .navbar-nav>li{
+  float: none;
+}
 
 .landing-page {
   span.navy {
