@@ -3,3 +3,13 @@
 {% if site.disqus %}
 <script id="dsq-count-scr" src="https://{{ site.disqus.name }}.disqus.com/count.js" async></script>
 {% endif %}
+<script type="text/javascript">
+    $(function () {
+        var navSelector = "#toc";
+        var $myNav = $(navSelector);
+        Toc.init($myNav);
+        $("#scorll").scrollspy({
+            target: navSelector
+        });
+    });
+</script>

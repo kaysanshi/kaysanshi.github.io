@@ -6,13 +6,6 @@ layout: default
 <div class="wrapper wrapper-content  animated fadeInRight article">
     
     <div class="row">
-        <div style="float:left;position:fixed" class="col-xl-3 pl-2 text-muted topbar-down">
-            <div id="toc-wrapper" class="">
-                <span class="">
-                </span>
-                <nav  id="toc" data-toggle="toc"></nav>
-            </div>
-        </div>
         <div class="ibox col-xs-12 col-sm-9 col-md-6 col-lg-8 col-lg-offset-2">
             <div class="ibox-content" data-target="#toc" id="scorll" data-spy="scorll">
                 <div class="pull-right">
@@ -67,13 +60,3 @@ layout: default
     </div>
 
 </div>
-<script type="text/javascript">
-    $(function () {
-        var navSelector = "#toc";
-        var $myNav = $(navSelector);
-        Toc.init($myNav);
-        $("#scorll").scrollspy({
-            target: navSelector
-        });
-    });
-</script>
