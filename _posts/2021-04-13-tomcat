@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Spring"
+date:   2021-04-15
+desc: "Spring"
+keywords: "Spring"
+categories: [Javaee]
+tags: [Javaee,spring]
+icon: icon-java
+---
+
+Spring使Java编程对每个人来说都更快、更容易和更安全。Spring对速度、简单性和生产力的关注使它成为世界上最流行的Java框架。
+
+我们使用了Spring框架附带的许多工具，获得了许多开箱即用的解决方案的好处，而且不必担心编写大量额外的代码，这确实为我们节省了一些时间和精力
+
+### Spring is everywhere
+Spring灵活的库受到全世界开发人员的信任。Spring每天都为数百万终端用户提供愉快的体验，无论是流媒体电视、在线购物还是无数其他创新解决方案。Spring也有来自所有科技巨头的贡献，包括阿里巴巴、亚马逊、谷歌、微软等
+
+### Spring is flexible
+Spring灵活而全面的扩展集和第三方库让开发人员可以构建几乎任何可以想象到的应用程序。在其核心，Spring框架的控制反转(IoC)和依赖注入(DI)特性为一系列广泛的特性和功能提供了基础。无论您是为web构建安全的、响应性的、基于云的微服务，还是为企业构建复杂的流数据流，Spring都有工具提供帮助
+
+### Spring is productive
+
+Spring Boot改变了您处理Java编程任务的方式，从根本上简化了您的体验。Spring Boot结合了应用程序上下文和自动配置的嵌入式web服务器等必需品，使微服务开发变得轻而易举。为了走得更快，您可以将Spring Boot与Spring Cloud丰富的支持库、服务器、模式和模板组合在一起，以在记录时间内安全地将整个基于微服务的架构部署到云中
+
+### Spring is fast
+ 
+我们的工程师非常关心性能。使用Spring，您将注意到默认情况下的快速启动、快速关闭和优化执行。Spring项目也越来越多地支持响应式(非阻塞)编程模型，以获得更高的效率。开发人员生产力是Spring的超级优势。Spring Boot帮助开发人员轻松地构建应用程序，而且比其他竞争性范式少得多。
+嵌入式web服务器、自动配置和fat jars可以帮助你快速上手，而且像Spring DevTools中的LiveReload这样的创新意味着开发人员可以更快地进行迭代
